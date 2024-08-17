@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 
@@ -15,12 +14,7 @@ use App\Http\Controllers\ProductoController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::get('productos/{id}', [ProductoController::class, 'show']);
 Route::post('productos', [ProductoController::class, 'create']);
 Route::put('productos/{id}', [ProductoController::class, 'update']);
-
-Route::get('CategoriaController/ListCategoria', [CategoriaController::class, 'listCategoria']);
-
-
-?>
+Route::get('categorias', [CategoriaController::class, 'listCategoria']);
